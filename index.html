@@ -5,13 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HappyCat</title>
     <style>
-      img{
-        width: 90%;
-        padding-left: 5%;
+      body {
+        background: linear-gradient(135deg, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        color: white;
+        overflow: hidden;
+      }
+      .container {
+        text-align: center;
+        animation: fadeIn 3s;
+      }
+      img {
+        width: 80%;
+        padding-left: 10%;
+        border: 5px solid #fff;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        animation: rotateImage 10s infinite linear;
+      }
+      p {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        margin-top: 20px;
+        animation: bounceText 2s infinite;
+        background: linear-gradient(135deg, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes rotateImage {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes bounceText {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
       }
     </style>
   </head>
   <body>
-    <img src="https://i.pinimg.com/originals/88/14/9b/88149b0400750578f4d07d9bc3fb0fee.gif">
+    <div class="container">
+      <img src="https://i.pinimg.com/originals/88/14/9b/88149b0400750578f4d07d9bc3fb0fee.gif" alt="Happy Cat">
+      <p>Happy<br>Happy<br>Happy<br>cat</p>
+    </div>
   </body>
 </html>
